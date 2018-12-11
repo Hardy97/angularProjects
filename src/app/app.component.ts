@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AngularAvanzado';
+  title = 'Curso de Angular 7 Avanzado: MEAN, JWT, Moodulos, Animaciones';
 }
