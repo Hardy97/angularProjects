@@ -7,8 +7,19 @@ import { Component } from '@angular/core';
 })
 export class TiendaComponent {
     titulo: string;
+    nombreDelParque: string;
+    miParque;
 
     constructor() {
         this.titulo = 'Esta es la tienda';
+    }
+
+    mostrarNombre() {
+        // console.log(this.nombreDelParque);
+    }
+
+    verDatosParque( event ) {
+        console.log(event);
+        this.miParque = event;
     }
 }

@@ -1,5 +1,32 @@
+<!-- Padre -->
 <h1 class="text-center">{{titulo}}</h1>
 <ul>
     <li>Camiseta roja</li>
     <li>Camiseta rosa</li>
 </ul>
+
+<hr/>
+<p>
+    Nombre del parque:
+    <input type="text" [(ngModel)]="nombreDelParque" (keyup)="mostrarNombre()">
+</p>
+
+<p>
+    Resultado: {{nombreDelParque}}
+</p>
+
+<div *ngIf="miParque">
+    <h4 class="text-center">Datos del hijo en el padre:</h4>
+    <ol>
+        <li>{{miParque.nombre}}</li>
+        <li>{{miParque.metros}}</li>
+        <li>{{miParque.vegetacion}}</li>
+        <li>{{miParque.abierto}}</li>
+    </ol>
+</div>
+<hr/>
+
+<!-- Hijo -->
+<!-- [nombre] es la variable con el @Input() en el hijo -->
+<!-- (pasameLosDatos) es un evento que me recibe los datos del @Output() enviados desde el hijo-->
+<app-parques [nombre]="nombreDelParque" *ngIf="nombreDelParque" (pasameLosDatos)="verDatosParque($event)"></app-parques>
