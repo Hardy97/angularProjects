@@ -1,10 +1,10 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges, OnInit, DoCheck, OnDestroy } from '@angular/core';
 
 @Component({
     selector: 'app-parques',
     templateUrl: 'parque.component.html'
 })
-export class ParquesComponent {
+export class ParquesComponent implements OnChanges, OnInit, DoCheck, OnDestroy {
 
     // Input es para pasar datos desde el padre hacia el hijo
     // Se le puede dar un alias a los Input mientras que cuando le vayas a bindear el valor desde
@@ -22,6 +22,23 @@ export class ParquesComponent {
         this.metros = 450;
         this.vegetacion = 'Alta';
         this.abierto = false;
+    }
+
+    ngOnChanges(changes: SimpleChanges) {
+        // console.log(changes);
+        console.log('Existen cambios en las propiedades');
+    }
+
+    ngOnInit() {
+        console.log('Metodo on Init lanzado');
+    }
+
+    ngDoCheck() {
+        console.log('DoCheck');
+    }
+
+    ngOnDestroy() {
+        console.log('OnDestroy: se elimino un componente');
     }
 
     emitirEvento() {
