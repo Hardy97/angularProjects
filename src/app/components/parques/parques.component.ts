@@ -24,6 +24,8 @@ export class ParquesComponent implements OnChanges, OnInit, DoCheck, OnDestroy {
         this.abierto = false;
     }
 
+    // Hooks ( Start )
+
     ngOnChanges(changes: SimpleChanges) {
         // console.log(changes);
         console.log('Existen cambios en las propiedades');
@@ -40,6 +42,8 @@ export class ParquesComponent implements OnChanges, OnInit, DoCheck, OnDestroy {
     ngOnDestroy() {
         console.log('OnDestroy: se elimino un componente');
     }
+
+    // Hooks ( End )
 
     emitirEvento() {
         // Cargamos un objeto para enviarselo al padre
