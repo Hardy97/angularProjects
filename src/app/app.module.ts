@@ -8,7 +8,7 @@ import { ParquesComponent } from './components/parques/parques.component';
 import { HomeComponent } from './components/home/home.component';
 
 import { routing, appRoutingProviders } from './app.routing';
-import { KeepersComponent } from './components/keppers/keepers.component';
+import { KeepersComponent } from './components/keepers/keepers.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AnimalsComponent } from './components/animals/animals.component';
 

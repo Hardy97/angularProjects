@@ -8,6 +8,5 @@ export class HomeComponent implements OnInit {
   title = 'Home';
 
   ngOnInit() {
-      console.log('home.component cargado !!');
   }
 }

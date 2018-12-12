@@ -21,6 +21,8 @@
                 <a class="nav-link" routerLink='contact'>Contacto</a>
             </li>
         </ul>
+        <span *ngIf="emailContacto" class="badge badge-info ml-auto">Email de Contacto: {{emailContacto}}</span>
+        <button *ngIf="emailContacto" class="btn btn-outline-danger ml-2" (click)="borrarEmail()">Eliminar</button>
     </div>
 </nav>
 <div class="container mt-5">
