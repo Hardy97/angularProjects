@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  title = 'Curso de Angular 7 Avanzado: MEAN, JWT, Moodulos, Animaciones';
+  // title = 'Curso de Angular 7 Avanzado: MEAN, JWT, Moodulos, Animaciones';
+  title = 'NGZOO';
   emailContacto;
 
   ngOnInit(): void {

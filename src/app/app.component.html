@@ -1,32 +1,45 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <a class="navbar-brand" routerLink='home'>Zoologico</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink='home'>{{title}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
+    </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav mx-auto">
             <li class="nav-item" routerLinkActive='active'>
-                <a class="nav-link" routerLink='home'>Inicio <span class="sr-only">(current)</span></a>
+                <a class="nav-link" routerLink='home'>
+                    <span class="fa fa-home"></span> Inicio
+                    <span class="sr-only">(current)</span>
+                </a>
             </li>
             <li class="nav-item" routerLinkActive='active'>
-                <a class="nav-link" routerLink='animals'>Animales</a>
+                <a class="nav-link" routerLink='animals'>
+                    <span class="fa fa-star"></span> Animales
+                </a>
             </li>
             <li class="nav-item" routerLinkActive='active'>
-                <a class="nav-link" routerLink='keepers'>Cuidadores</a>
+                <a class="nav-link" routerLink='keepers'>
+                    <span class="fa fa-user"></span> Cuidadores
+                </a>
             </li>
             <li class="nav-item" routerLinkActive='active'>
-                <a class="nav-link" routerLink='tienda'>Tienda</a>
+                <a class="nav-link" routerLink='tienda'>
+                    <span class="fa fa-gift"></span> Tienda
+                </a>
             </li>
             <li class="nav-item" routerLinkActive='active'>
-                <a class="nav-link" routerLink='contact'>Contacto</a>
+                <a class="nav-link" routerLink='contact'>
+                    <span class="fa fa-comment"></span> Contacto
+                </a>
+            </li>
+            <li class="hidden">
+                <span *ngIf="emailContacto">
+                    <b>Email de contacto: </b> {{emailContacto}}
+                    <button (click)="borrarEmail()"> Eliminar email </button>
+                </span>
             </li>
         </ul>
-        <span *ngIf="emailContacto" class="badge badge-info ml-auto">Email de Contacto: {{emailContacto}}</span>
-        <button *ngIf="emailContacto" class="btn btn-outline-danger ml-2" (click)="borrarEmail()">Eliminar</button>
     </div>
 </nav>
-<div class="container mt-5">
-    <!-- <h2 class="text-center mb-5">{{title}}</h2> -->
-    <!-- <app-tienda></app-tienda> -->
+<div class="container-fluid mt-5">
     <router-outlet></router-outlet>
 </div>

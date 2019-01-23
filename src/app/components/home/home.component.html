@@ -1,1 +1,17 @@
-<h1>{{title}}</h1>
+<div class="col-lg-8 offset-lg-2">
+    <div class="jumbotron border">
+        <h1>{{title}}</h1>
+        <p>Disfruta de los animales más exoticos de nuestro zoologico :)</p>
+        <p>
+            <a class="btn btn-primary btn-lg ml-1" [routerLink]="['/animals']">
+                Ver animales
+            </a>
+            <a class="btn btn-success btn-lg ml-1" [routerLink]="['/keepers']">
+                Ver Cuidadores
+            </a>
+            <a class="btn btn-info btn-lg ml-1" [routerLink]="['/contact']">
+                Contacta con nosotros
+            </a>
+        </p>
+    </div>
+</div>
