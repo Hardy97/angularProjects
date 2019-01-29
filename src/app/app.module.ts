@@ -11,7 +11,8 @@ import { routing, appRoutingProviders } from './app.routing';
 import { KeepersComponent } from './components/keepers/keepers.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AnimalsComponent } from './components/animals/animals.component';
-
+// Importar nuestro nuevo modulo
+import { ModuloEmailModule } from './moduloemail/moduloemail.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AnimalsComponent } from './components/animals/animals.component';
   imports: [
     BrowserModule,
     FormsModule,
-    routing
+    routing,
+    ModuloEmailModule
   ],
   providers: [
     appRoutingProviders
