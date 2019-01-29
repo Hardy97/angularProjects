@@ -13,6 +13,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { AnimalsComponent } from './components/animals/animals.component';
 // Importar nuestro nuevo modulo
 import { ModuloEmailModule } from './moduloemail/moduloemail.module';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ModuloEmailModule } from './moduloemail/moduloemail.module';
     BrowserModule,
     FormsModule,
     routing,
-    ModuloEmailModule
+    ModuloEmailModule,
+    AdminModule
   ],
   providers: [
     appRoutingProviders
