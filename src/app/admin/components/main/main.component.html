@@ -1,2 +1,18 @@
-<h3>{{title}}</h3>
+<div class="container">
+    <h3>{{title}}</h3>
+
+    <ul class="nav nav-pills">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" [routerLink]="['listado']" [routerLinkActive]="['active']">Listado</a>
+        </li>
+        <li class="nav-item" role="presentation" [routerLinkActive]="['active']">
+            <a class="nav-link" [routerLink]="['crear']" [routerLinkActive]="['active']">Crear</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" [routerLink]="['editar']" [routerLinkActive]="['active']">Informacion</a>
+        </li>
+    </ul>
+</div>
+
+
 <router-outlet></router-outlet>
